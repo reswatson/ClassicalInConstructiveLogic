@@ -9,8 +9,10 @@ This use of Cubical Agda is essential in Logic/Classical/Predicates.agda where t
 
 Here is the definition of Outer Classical (using cubical equality):
 
+```
 data OuterClassical (A : Set ℓ) : Set (ℓ-suc ℓ) where
   invariant : ((ISTRUE A) ≡ A) -> OuterClassical A
+```
 
 A few necessary axioms from  S.C. Kleene, "Introduction to metamathematics" , North-Holland (1951) are proven in Logic/Classical/Axiomatisation.agda to show that we have indeed coded a classical predicate calculus inside the constructive logic of Cubical Agda. It is kept as minimal as possible, meaning that it is not necessary to show the propositional calculus axioms again, nor any extensions which pertain more to how the type theory is used, as in Kleene's number theory axioms - this all devolves to type theory, and is not the topic of this work.
 
